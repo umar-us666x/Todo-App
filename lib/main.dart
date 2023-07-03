@@ -18,6 +18,8 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.dark,
         fontFamily: "Roboto",
       ),
+
+      // Routes Tampilan
       routes: {
         'homepage': (context) => HomePage(),
         'add_todo': (context) => AddTodo(),

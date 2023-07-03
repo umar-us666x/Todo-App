@@ -6,6 +6,7 @@ class AddTodo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Controller Title dan Description
     TextEditingController controllerTitle = TextEditingController();
     TextEditingController controllerDesc = TextEditingController();
 
@@ -16,6 +17,7 @@ class AddTodo extends StatelessWidget {
       backgroundColor: Colors.transparent,
     );
 
+    // Untuk mengatur container
     double heightBody = MediaQuery.of(context).size.height -
         myAppbar.preferredSize.height -
         MediaQuery.of(context).padding.top;
@@ -23,6 +25,7 @@ class AddTodo extends StatelessWidget {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         onPressed: () {
+          // Function untuk mengatur Title & Desc, Jika kosong maka tidak bisa ditambahkan
           if (controllerTitle.text.length != 0 ||
               controllerDesc.text.length != 0) {
             dataTodo.add(

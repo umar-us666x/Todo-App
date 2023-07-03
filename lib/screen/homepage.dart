@@ -19,6 +19,7 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Colors.transparent,
     );
 
+    // Untuk mengatur responsi layar
     double heightBody = MediaQuery.of(context).size.height -
         myAppbar.preferredSize.height -
         MediaQuery.of(context).padding.top;
@@ -52,7 +53,6 @@ class _HomePageState extends State<HomePage> {
               padding: EdgeInsets.all(20),
               width: widthBody,
               height: heightBody * 0.15,
-              // color: Colors.amber,
               child: TextField(
                 onChanged: searchTodo,
                 decoration: InputDecoration(
@@ -63,10 +63,8 @@ class _HomePageState extends State<HomePage> {
             ),
             todos.length != 0
                 ? Container(
-                    // padding: EdgeInsets.symmetric(horizontal: 20),
                     height: heightBody * 0.85,
                     width: widthBody,
-                    // color: Colors.amber,
                     child: ListView.builder(
                       itemCount: todos.length,
                       itemBuilder: ((context, index) {
