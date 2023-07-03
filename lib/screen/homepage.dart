@@ -13,10 +13,13 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     AppBar myAppbar = AppBar(
-      title: Text("Todo App"),
+      title: Text(
+        "Todo App",
+        style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+      ),
       centerTitle: true,
       elevation: 0,
-      backgroundColor: Colors.transparent,
+      backgroundColor: Colors.white,
     );
 
     // Untuk mengatur responsi layar
