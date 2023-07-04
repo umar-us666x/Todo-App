@@ -73,34 +73,35 @@ class _HomePageState extends State<HomePage> {
                       itemBuilder: ((context, index) {
                         final todo = todos[index];
                         return CheckboxListTile(
-                            secondary: IconButton(
-                              onPressed: () {
-                                setState(() {
-                                  todos.removeAt(index);
-                                });
-                              },
-                              icon: Icon(
-                                Icons.delete,
-                                color: Colors.red,
-                              ),
-                            ),
-                            controlAffinity: ListTileControlAffinity.leading,
-                            title: Text(
-                              todo.title,
-                              style: TextStyle(
-                                fontSize: 18,
-                                decoration: todo.isCompleted
-                                    ? TextDecoration.lineThrough
-                                    : TextDecoration.none,
-                              ),
-                            ),
-                            subtitle: Text(todo.desc),
-                            value: todo.isCompleted,
-                            onChanged: (value) {
+                          secondary: IconButton(
+                            onPressed: () {
                               setState(() {
-                                todo.isCompleted = value!;
+                                todos.removeAt(index);
                               });
+                            },
+                            icon: Icon(
+                              Icons.delete,
+                              color: Colors.red,
+                            ),
+                          ),
+                          controlAffinity: ListTileControlAffinity.leading,
+                          title: Text(
+                            todo.title,
+                            style: TextStyle(
+                              fontSize: 18,
+                              decoration: todo.isCompleted
+                                  ? TextDecoration.lineThrough
+                                  : TextDecoration.none,
+                            ),
+                          ),
+                          subtitle: Text(todo.desc),
+                          value: todo.isCompleted,
+                          onChanged: (value) {
+                            setState(() {
+                              todo.isCompleted = value!;
                             });
+                          },
+                        );
                       }),
                     ),
                   )
