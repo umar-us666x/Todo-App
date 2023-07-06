@@ -12,6 +12,7 @@ class _HomePageState extends State<HomePage> {
   List<Todo> todos = dataTodo;
   @override
   Widget build(BuildContext context) {
+    // Mengatur AppBar
     AppBar myAppbar = AppBar(
       title: Text(
         "Todo App",
@@ -48,6 +49,8 @@ class _HomePageState extends State<HomePage> {
         },
         child: Icon(Icons.add),
       ),
+
+      // Memanggil Variable AppBar
       appBar: myAppbar,
       body: SingleChildScrollView(
         child: Column(
